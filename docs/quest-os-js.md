@@ -15,7 +15,7 @@ Check out our [QD Messages Module](qd-messages-ts) and the [Awesome Quest Networ
 
 **OR**  
 
-``git clone quest-os-js && cd quest-os-js && git checkout 0.9.3 && cd ..``
+``git clone https://github.com/QuestNetwork/quest-os-js && cd quest-os-js && git checkout 0.9.3 && cd ..``
 
 # Features
 
