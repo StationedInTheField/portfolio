@@ -7,7 +7,7 @@
 }
 
 
-.sidebar-nav ul > li > p > a[title='Developer'],.sidebar-nav ul > li > p > a[title='API Reference'], .sidebar-nav ul > li > a[title='License']{
+.sidebar-nav ul > li > p > a[title='Developer'],.sidebar-nav ul > li > p > a[title='qOS API Reference'], .sidebar-nav ul > li > a[title='License']{
   font-weight:bold;
   color:#3246d7;
   font-size: 1.05rem;
