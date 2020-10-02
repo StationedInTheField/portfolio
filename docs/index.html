@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Quest Network Documentation</title>
+	<link rel="icon" href="_media/favicon.ico">
+	<meta name="keywords" content="doc,docs,documentation,gitbook,creator,generator,github,jekyll,github-pages">
+	<meta name="description" content="A magical documentation generator.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" title="vue">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css" title="dark" disabled>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css" title="buble" disabled>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css" title="pure" disabled>
+  <link rel="stylesheet" href="style.css">
+  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1.0.1/index.min.js"></script>
+	<style>
+		nav.app-nav li ul {
+			min-width: 100px;
+		}
+
+    #carbonads {
+			box-shadow: none !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app">Loading ...</div>
+	<script>
+		window.$docsify = {
+      alias: {
+        '.*?/awesome': 'https://raw.githubusercontent.com/docsifyjs/awesome-docsify/master/README.md',
+        '.*?/changelog': 'https://raw.githubusercontent.com/docsifyjs/docsify/master/CHANGELOG.md',
+        '/.*/_navbar.md': '/_navbar.md',
+        '/zh-cn/(.*)': 'https://cdn.jsdelivr.net/gh/docsifyjs/docs-zh@master/$1',
+        '/de-de/(.*)': 'https://raw.githubusercontent.com/docsifyjs/docs-de/master/$1',
+        '/ru-ru/(.*)': 'https://raw.githubusercontent.com/docsifyjs/docs-ru/master/$1',
+        '/es/(.*)': 'https://raw.githubusercontent.com/docsifyjs/docs-es/master/$1',
+        '/write-a-plugin': 'https://raw.githubusercontent.com/docsifyjs/docsify/master/docs/write-a-plugin.md'
+      },
+      auto2top: true,
+      coverpage: true,
+      executeScript: true,
+      loadSidebar: true,
+      loadNavbar: true,
+      mergeNavbar: true,
+      maxLevel: 4,
+      subMaxLevel: 2,
+      name: 'Quest Network',
+      search: {
+        noData: {
+          '/de-de/': 'Keine Ergebnisse!',
+          '/zh-cn/': '没有结果!',
+          '/': 'No results!'
+        },
+        paths: 'auto',
+        placeholder: {
+          '/de-de/': 'Suche',
+          '/zh-cn/': '搜索',
+          '/': 'Search'
+        }
+      },
+      plugins: [
+
+
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            if (/githubusercontent\.com/.test(vm.route.file)) {
+              url = vm.route.file
+                .replace('raw.githubusercontent.com', 'github.com')
+                .replace(/\/master/, '/blob/master')
+            } else if (/jsdelivr\.net/.test(vm.route.file)) {
+              url = vm.route.file
+                .replace('cdn.jsdelivr.net/gh', 'github.com')
+                .replace('@master', '/blob/master')
+            } else {
+              url = 'https://github.com/QuestNetwork/' + vm.route.file.split('.')[0]
+            }
+            var editHtml = '[:octocat: Open in GitHub](' + url + ')\n'
+            return editHtml
+              + html
+              + '\n\n----\n\n'
+              + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;"></a>'
+          }),
+          hook.afterEach(function (html){
+            if(vm.route.path === '/'){
+              return html
+            }
+            return `${html}<br/> Footer`
+          })
+        }
+      ]
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+	<!-- <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sfidebar-collapse.min.js"> -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/matomo.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-nginx.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-php.min.js"></script>
+  <script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'docsifyjs/Lobby'
+  };
+  </script>
+  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+</body>
+
+</html>

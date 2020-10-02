@@ -1,0 +1,38 @@
+{
+  "name": "@questnetwork/docs",
+  "author": "StationedInTheField",
+  "version": "0.9.4",
+  "description": "Decentralized End-To-End Encrypted P2P Platform",
+  "main": "main.js",
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuestNetwork/qDesk.git"
+  },
+  "homepage": "https://www.qDesk.org",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "init": "mkdir recoveryWEB && mkdir recoveryAPP && mkdir local",
+    "prepare": "",
+    "update": "node update.js",
+    "serve": "npm run update && docsify serve ./docs",
+    "watch-reset": "echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p"
+  },
+  "private": false,
+  "dependencies": {
+    "await-exec": "^0.1.2",
+    "chalk": "^4.1.0",
+    "cli-select": "^1.1.2",
+    "enquirer": "^2.3.6",
+    "figlet": "^1.5.0",
+    "fs": "0.0.1-security",
+    "axios": "^0.19.2"
+  },
+  "contributors": [
+    "StationedInTheField <ask@stationedinthefield.com>"
+  ]
+}

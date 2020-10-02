@@ -1,0 +1,41 @@
+.markdown-section > p:first-child > a:first-child {
+    float: right;
+}
+
+.markdown-section > p > a[href$='docsify.js.org'] {
+    display:none;
+}
+
+
+.sidebar-nav ul > li > p > a[title='Developer'],.sidebar-nav ul > li > p > a[title='API Reference'], .sidebar-nav ul > li > a[title='License']{
+  font-weight:bold;
+  color:#3246d7;
+  font-size: 1.05rem;
+}
+
+.sidebar-nav ul > li > p:first-child {
+  font-weight:bold;
+  color:#9e97ff;
+
+  font-size: 1.05rem;
+}
+
+
+.sidebar-nav ul:first-child  > li > p:first-child {
+  font-weight:bold;
+  color:#32c032;
+  font-size: 1.05rem;
+}
+
+
+a[href="https://github.com/QuestNetwork/security"],a[href="https://github.com/QuestNetwork/download"], a[href="https://github.com/QuestNetwork/support-us"], a[href="https://github.com/QuestNetwork/quickstart"], a[href="https://github.com/QuestNetwork/web-demo"],a[href="https://github.com/QuestNetwork/license"]{
+  display:none;
+}
+
+.app-nav{
+  display:none;
+}
+
+.gitter-open-chat-button{
+  display:none;
+}
