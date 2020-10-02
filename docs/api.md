@@ -1,8 +1,5 @@
 
-# QuestNetwork/qd-social-ts
-
-See our documentation for the QuestNetwork/qd-social-ts Reference.`
-# QuestNetwork/quest-os-js
+# quest-os-js
 
 ## system
 
@@ -257,7 +254,16 @@ Gets all invites for a channel
 let invites = <os>.channel.invite.get('propaganda----1234');
 ```
 
-## social
+
+
+**Unfortunately nobody is working on a detailed quest-os-js documentation yet, until then check out the source in [qDesk Messages](quest-messenger-js) 0.9.3+ to see how to use the OS.**
+
+We recommend to use our [quest-cli](quest-cli) to test and build the package. It allows you to bootstrap your Quest Network apps with the same peers and settings.
+
+Pro Tip: Put a file in your `/bin` that runs the quest-cli like so `node /path/to/quest-cli/index.js` from any folder on your system. It's much nicer!
+# social 
+
+
 
 ### social.togglePrivacy(profilePubKey = 'NoProfileSelected')
 [![Social](https://img.shields.io/badge/process-Social-green)](quest-social-js) [![Bee](https://img.shields.io/badge/process-Bee-yellow)](quest-bee-js) [![Ocean](https://img.shields.io/badge/process-Ocean-blue)](quest-ocean-js) 
@@ -301,10 +307,3 @@ if(<os>.social.isRequestedFavoite(socialPubKey)){
   console.log("Hello Universe");
 };
 ```
-
-
-**Unfortunately nobody is working on a detailed QuestNetwork/quest-os-js documentation yet, until then check out the source in [qDesk Messages](quest-messenger-js) 0.9.3+ to see how to use the OS.**
-
-We recommend to use our [quest-cli](quest-cli) to test and build the package. It allows you to bootstrap your Quest Network apps with the same peers and settings.
-
-Pro Tip: Put a file in your `/bin` that runs the quest-cli like so `node /path/to/quest-cli/index.js` from any folder on your system. It's much nicer!

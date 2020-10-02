@@ -35,8 +35,11 @@ async function start(){
       let result = [];
       for(let p of parts){
 
-        if(p.indexOf('API') == 0){
-          apiPackages.push(p.replace(new RegExp(/API/, 'g'),repo['full_name']))
+        if(p.indexOf('API') == 0 && repo['full_name'] != 'QuestNetwork/quest-os-js'){
+          apiPackages.push(p.replace(new RegExp(/API/, 'g'),repo['full_name'].split('/')[1].split('-')[1]));
+        }
+        else if(p.indexOf('API') == 0){
+            apiPackages.push(p.replace(new RegExp(/API/, 'g'),repo['full_name'].split('/')[1]));
         }
 
         if( p.indexOf('Manual & Documentation') != 0 && p.indexOf('Download') != 0 && p.indexOf('Web Demo') != 0 && p.indexOf('Support Us') != 0 && p.indexOf('License') != 0 && p.indexOf('Development') != 0 && p.indexOf('Lead Maintainer') != 0 && p.indexOf('API') != 0 && p.indexOf('Security') != 0){
@@ -62,7 +65,14 @@ async function start(){
     }
   }
 
-  let apiReadme =  '\n# ' + apiPackages.join('# ');
+  let apiReadme =  '';
+  if(apiPackages.length > 1){
+     apiReadme =  '\n# ' + apiPackages.join('# ');
+  }
+  else{
+    apiReadme =  '\n# ' + apiPackages[0];
+  }
+
   console.log(apiPackages.length);
   // console.log(apiReadme);
   fs.writeFileSync('docs/api.md',apiReadme,{encoding:'utf8',flag:'w'});

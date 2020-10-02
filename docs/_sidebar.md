@@ -1,4 +1,4 @@
-- [API Reference](api.md)
+- [qOS API Reference](api.md)
 
 - Getting Started
 
