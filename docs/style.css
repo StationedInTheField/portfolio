@@ -39,3 +39,31 @@ a[href="https://github.com/QuestNetwork/security"],a[href="https://github.com/Qu
 .gitter-open-chat-button{
   display:none;
 }
+
+.cover.show{
+background: linear-gradient(to left bottom, hsl(244deg 43% 32%) 0%,hsl(252deg 100% 6%) 100%) !important;
+
+position: fixed;
+    z-index: 222;
+
+}
+
+.cover-main p {
+    color: #a4d1ff;
+}
+
+
+.cover.show .anchor span {
+    color: #a4d1ff !important;
+}
+
+section.cover ul {
+
+    color: #920000;
+}
+
+.cover.show p {
+    line-height: 1.5rem;
+    margin: 1em 0;
+    color: white;
+  }

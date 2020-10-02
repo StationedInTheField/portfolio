@@ -1,12 +1,12 @@
-![logo](_media/icon.svg)
+:satellite:
 
-# docsify <small>4.11.6</small>
+# Quest Network <small>0.9.3</small>
 
-> A magical documentation site generator.
+> Works without the internet!
 
 - Simple and lightweight
-- No statically built html files
 - Multiple themes
+- IPFS PubSub
 
-[GitHub](https://github.com/docsifyjs/docsify/)
-[Getting Started](#docsify)
+[GitHub](https://github.com/QuestNetwork/qDesk/)
+[Getting Started](quickstart.md)
