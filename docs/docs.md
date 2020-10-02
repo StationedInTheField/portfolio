@@ -4,6 +4,8 @@
 
 An easy crawler that merges the documentation from the README.md files in this organization.
 
+View it on https://questnetwork.github.io/docs
+
 # Commands
 
 `npm install` Installs the dependencies
