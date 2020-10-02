@@ -11,16 +11,8 @@
   },
   "homepage": "https://www.qDesk.org",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "init": "mkdir recoveryWEB && mkdir recoveryAPP && mkdir local",
-    "prepare": "",
     "crawl": "node crawl.js",
     "serve": "npm run crawl && docsify serve ./docs",
-    "watch-reset": "echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p"
   },
   "private": false,
   "dependencies": {
