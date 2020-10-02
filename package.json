@@ -3,7 +3,7 @@
   "author": "StationedInTheField",
   "version": "0.9.4",
   "description": "Decentralized End-To-End Encrypted P2P Platform",
-  "main": "main.js",
+  "main": "crawl.js",
   "license": "AGPL-3.0",
   "repository": {
     "type": "git",
