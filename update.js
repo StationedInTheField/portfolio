@@ -39,7 +39,7 @@ async function start(){
           apiPackages.push(p.replace(new RegExp(/API/, 'g'),repo['full_name']))
         }
 
-        if( p.indexOf('Download') != 0 && p.indexOf('Web Demo') != 0 && p.indexOf('Support Us') != 0 && p.indexOf('License') != 0 && p.indexOf('Development') != 0 && p.indexOf('Lead Maintainer') != 0 && p.indexOf('API') != 0 && p.indexOf('Security') != 0){
+        if( p.indexOf('Manual & Documentation') != 0 && p.indexOf('Download') != 0 && p.indexOf('Web Demo') != 0 && p.indexOf('Support Us') != 0 && p.indexOf('License') != 0 && p.indexOf('Development') != 0 && p.indexOf('Lead Maintainer') != 0 && p.indexOf('API') != 0 && p.indexOf('Security') != 0){
           result.push(p);
         }
         else if(name == 'QuestNetwork/qDesk'){
