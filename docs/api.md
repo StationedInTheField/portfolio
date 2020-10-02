@@ -11,7 +11,7 @@ See our documentation for the QuestNetwork/qd-social-ts Reference.`
 Boots the operating system. The GitHub branches master/0.9.2/0.9.3+ boot with:
 
 JavaScript/NodeJS
-```
+```javascript
 import { qOS } from '@questnetwork/quest-os-js'
 // configure with a bootstrap swarm peer, for testing you can use:
 let config = {
@@ -26,7 +26,7 @@ qOS.boot().then( () => {
 ```
 
 TypeScript/Angular Service
-```
+```javascript
 import { Injectable } from '@angular/core';
 import { qOS }  from '@questnetwork/quest-os-js';
 import * as swarmJson from '../swarm.json';
@@ -66,7 +66,7 @@ export class QuestOSService {
 
 Returns true once boot is complete, otherwise returns false.
 
-```
+```javascript
 if(<os>.isReady()){
   console.log("Ready To Sign In");
 };
@@ -77,7 +77,7 @@ if(<os>.isReady()){
 
 Returns a Subject that pushes next when boot is complete
 
-```
+```javascript
 if(<os>.onReady().subsribe( () => {
   console.log("Ready To Sign In");
 });
@@ -88,7 +88,7 @@ if(<os>.onReady().subsribe( () => {
 
 Reboots the entire system
 
-```
+```javascript
 <os>.reboot();
 ```
 
@@ -104,7 +104,7 @@ Locks the system from saving any changes
 [![Bee](https://img.shields.io/badge/process-Bee-yellow)](quest-bee-js)
 
 Unlocks the system from saving changes and saves changes normally
-```
+```javascript
 <os>.disableSaveLock();
 ```
 
@@ -115,7 +115,7 @@ Unlocks the system from saving changes and saves changes normally
 Sets the storage location for the app. Normally Quest OS does this automatically and you do not need to call this function.
 Possible locations are: `"Download"`,`"LocalStorage"` or `"ConfigFile"`
 
-```
+```javascript
 <os>.setStorageLocation("LocalStorage");
 ```
 
@@ -124,7 +124,7 @@ Possible locations are: `"Download"`,`"LocalStorage"` or `"ConfigFile"`
 
 Returns a string with the current storage location
 
-```
+```javascript
 <os>.getStorageLocation();
 ```
 
@@ -132,14 +132,14 @@ Returns a string with the current storage location
 [![Bee](https://img.shields.io/badge/process-Bee-yellow)](quest-bee-js)
 
 Activates Accounts. Empty config creates a new account
-```
+```javascript
 <os>.signIn({});
 ```
 ### signOut()
 [![Bee](https://img.shields.io/badge/process-Bee-yellow)](quest-bee-js)
 
 Deactivates Accounts And Restarts The Interface On The Web, Closes The Current Window In Electron
-```
+```javascript
 <os>.signOut();
 ```
 
@@ -147,7 +147,7 @@ Deactivates Accounts And Restarts The Interface On The Web, Closes The Current W
 [![Bee](https://img.shields.io/badge/process-Bee-yellow)](quest-bee-js)
 
 Returns a subscribable Subject that fires when the account is signed in.
-```
+```javascript
 <os>.onSignIn().subscribe( () => {
   console.log("Hello Universe");
 });
@@ -157,7 +157,7 @@ Returns a subscribable Subject that fires when the account is signed in.
 [![Bee](https://img.shields.io/badge/process-Bee-yellow)](quest-bee-js)
 
 Returns a boolean true or false
-```
+```javascript
 if(<os>.isSignedIn()){
   console.log("Hello Universe");
 };
@@ -169,7 +169,7 @@ if(<os>.isSignedIn()){
 [![Bee](https://img.shields.io/badge/process-Bee-yellow)](quest-bee-js) [![Ocean](https://img.shields.io/badge/process-Ocean-blue)](quest-ocean-js)
 
 Returns the clean channel name
-```
+```javascript
 let claenChannelName = await <os>.channel.create('propaganda');
 ```
 
@@ -177,7 +177,7 @@ let claenChannelName = await <os>.channel.create('propaganda');
 [![Bee](https://img.shields.io/badge/process-Bee-yellow)](quest-bee-js) [![Ocean](https://img.shields.io/badge/process-Ocean-blue)](quest-ocean-js)
 
 Removes a channel
-```
+```javascript
 <os>.channel.remove('propaganda----1234');
 ```
 
@@ -185,7 +185,7 @@ Removes a channel
 [![Ocean](https://img.shields.io/badge/process-Ocean-blue)](quest-ocean-js)
 
 Returns a Subject that forwards non-system channel messages.
-```
+```javascript
 <os>.channel.listen('propaganda----1234').subscribe( msg ){
   console.log(msg);
 }
@@ -195,7 +195,7 @@ Returns a Subject that forwards non-system channel messages.
 [![Ocean](https://img.shields.io/badge/process-Ocean-blue)](quest-ocean-js)
 
 Returns a Subject that forwards non-system channel messages.
-```
+```javascript
 await <os>.channel.publish('propaganda----1234',"Hello Universe");
 ```
 
@@ -203,7 +203,7 @@ await <os>.channel.publish('propaganda----1234',"Hello Universe");
 [![Ocean](https://img.shields.io/badge/process-Ocean-blue)](quest-ocean-js)
 
 Opens the channel to everyone who can solve the Captcha provided by [Quest Image Captcha JS](quest-image-captcha-js)
-```
+```javascript
 <os>.channel.challenge.enable('propaganda----1234');
 ```
 
@@ -211,14 +211,14 @@ Opens the channel to everyone who can solve the Captcha provided by [Quest Image
 [![Ocean](https://img.shields.io/badge/process-Ocean-blue)](quest-ocean-js)
 
 Closes the channel to invite only participation
-```
+```javascript
 <os>.channel.challenge.disable('propaganda----1234');
 ```
 
 ### channel.challenge.isEnabled(cleanChannelName)  
 [![Ocean](https://img.shields.io/badge/process-Ocean-blue)](quest-ocean-js)
 
-```
+```javascript
 if(<os>.isEnabled()){
   console.log("Hello Universe");
 };
@@ -236,7 +236,7 @@ Creates a new channel invite, specify max uses of this invite code and whether o
 [![Bee](https://img.shields.io/badge/process-Bee-yellow)](quest-bee-js) [![Ocean](https://img.shields.io/badge/process-Ocean-blue)](quest-ocean-js)
 
 Removes a channel invite
-```
+```javascript
 <os>.channel.invite.remove('propaganda----1234',"5448495320495320414e2045585452454d454c59204c4f4e4720414e4420494e56414c494420494e5649544520434f4445");
 ```
 
@@ -244,7 +244,7 @@ Removes a channel invite
 [![Ocean](https://img.shields.io/badge/process-Ocean-blue)](quest-ocean-js)
 
 Gets all invites for a channel
-```
+```javascript
 let invites = <os>.channel.invite.get('propaganda----1234');
 ```
 
@@ -253,7 +253,7 @@ let invites = <os>.channel.invite.get('propaganda----1234');
 [![Ocean](https://img.shields.io/badge/process-Ocean-blue)](quest-ocean-js)
 
 Gets all invites for a channel
-```
+```javascript
 let invites = <os>.channel.invite.get('propaganda----1234');
 ```
 
@@ -265,7 +265,7 @@ let invites = <os>.channel.invite.get('propaganda----1234');
 Toggles your profile's visibility between private and public, not giving a pubKey will automatically select your first profile. 
 In private mode you have to manually share your profile with everyone you want to see your details. In Public mode all the members of the channels you're in can see your profile.
 
-```
+```javascript
 <os>.social.togglePrivacy();
 ```
 
@@ -274,7 +274,7 @@ In private mode you have to manually share your profile with everyone you want t
 
 Checks if a profile has public visibility, not giving a pubKey will automatically select your first profile. 
 
-```
+```javascript
 if(<os>.social.isPublic(socialPubKey)){
   console.log("Hello Universe");
 };
@@ -285,7 +285,7 @@ if(<os>.social.isPublic(socialPubKey)){
 
 Checks if a profile is in our favorites, returns boolean true or false.
 
-```
+```javascript
 if(<os>.social.isFavoite(socialPubKey)){
   console.log("Hello Universe");
 };
@@ -296,7 +296,7 @@ if(<os>.social.isFavoite(socialPubKey)){
 
 Checks if a profile is a requested favorite, returns boolean true or false.
 
-```
+```javascript
 if(<os>.social.isRequestedFavoite(socialPubKey)){
   console.log("Hello Universe");
 };

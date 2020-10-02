@@ -1,5 +1,3 @@
-:satellite:
-
 # Quest Network <small>0.9.3</small>
 
 > Works without the internet!

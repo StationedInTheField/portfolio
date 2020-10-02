@@ -60,6 +60,7 @@ position: fixed;
 section.cover ul {
 
     color: #920000;
+        margin-bottom: 70px;
 }
 
 .cover.show p {
