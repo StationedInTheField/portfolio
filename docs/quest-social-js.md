@@ -8,6 +8,8 @@ The Social process for the [Quest Network Operating System](quest-os-js) orchest
 See [QD Social TS](qd-social-ts) the [Features](qd-social-ts#Features) & [Roadmap](qd-social-ts#Roadmap)
 
 # Installation & Usage
+Check out our [API Reference](api.md) to get started!
+
 ```
 npm install @questnetwork/quest-social-js@0.9.3
 ```

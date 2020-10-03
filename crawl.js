@@ -4,6 +4,7 @@ const fs = require('fs');
 async function start(){
   let repositories = await axios.get('https://api.github.com/users/QuestNetwork/repos');
   let apiPackages = [];
+  let apiRepos = [];
   for( let repo of repositories['data']){
     //crawling first repo
     try{
@@ -40,9 +41,11 @@ async function start(){
 
         if(p.indexOf('API') == 0 && repo['full_name'] != 'QuestNetwork/quest-os-js'){
           apiPackages.push(p.replace(new RegExp(/API/, 'g'),repo['full_name'].split('/')[1].split('-')[1]));
+          apiRepos.push(repo['full_name']);
         }
         else if(p.indexOf('API') == 0){
             apiPackages.push(p.replace(new RegExp(/API/, 'g'),repo['full_name'].split('/')[1]));
+            apiRepos.push(repo['full_name']);
         }
 
         if( p.indexOf('Manual & Documentation') != 0 && p.indexOf('Download') != 0 && p.indexOf('Web Demo') != 0 && p.indexOf('Support Us') != 0 && p.indexOf('License') != 0 && p.indexOf('Development') != 0 && p.indexOf('Lead Maintainer') != 0 && p.indexOf('API') != 0 && p.indexOf('Security') != 0){
@@ -114,11 +117,22 @@ async function start(){
 
     let readmeContent = "";
 
-    readmeContent = fs.readFileSync('docs/quest-os-js.md').toString('utf8');
-    readmeContent = readmeContent.replace('\n# Features','\nCheck out our [API Reference](api.md) to get started!\n# Features')
-    fs.writeFileSync('docs/quest-os-js.md',readmeContent,{encoding:'utf8',flag:'w'})
+    if(apiRepos.length > 0){
+      for( p of apiRepos){
+      readmeContent = fs.readFileSync('docs/'+p.split('/')[1]+'.md').toString('utf8');
+      if(readmeContent.indexOf('\n# Features') > -1){
+        readmeContent = readmeContent.replace('\n# Features','\nCheck out our [API Reference](api.md) to get started!\n# Features')
+      }
+      else if(readmeContent.indexOf('\n# Installation & Usage') > -1){
+        readmeContent = readmeContent.replace('\n# Installation & Usage','\n# Installation & Usage\nCheck out our [API Reference](api.md) to get started!\n')
 
-  
+      }
+      fs.writeFileSync('docs/'+p.split('/')[1]+'.md',readmeContent,{encoding:'utf8',flag:'w'})
+
+      }
+    }
+
+
 
 }
 
