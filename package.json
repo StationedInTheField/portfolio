@@ -11,9 +11,8 @@
   },
   "homepage": "https://www.qDesk.org",
   "scripts": {
-    "crawl": "node crawl.js",
-    "serve": "npm run crawl && docsify serve ./docs",
-    "update": "npm run crawl && git add * && git commit -m 'update' && docsify serve ./docs"
+    "serve": "docsify serve ./docs",
+    "update": "git add * && git commit -m 'update' && docsify serve ./docs"
   },
   "private": false,
   "dependencies": {

@@ -173,6 +173,12 @@ h1{
 }
 
 
+ .cover-main {
+    top: -30px !important;
+}
+
+
+
 @media only screen and (max-width: 778px) {
   .cover-main > blockquote > p{
   display:none
@@ -180,9 +186,10 @@ h1{
 }
 
 header svg{
-  enable-background:new 0 0 30 24;    width: 46px;
-top: 6px;
-position: relative;
+  enable-background:new 0 0 30 24;
+  width: 46px;
+  top: 6px;
+  position: relative;
 }
 
 @media only screen and (max-width: 438px) {
