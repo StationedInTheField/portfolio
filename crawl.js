@@ -76,7 +76,7 @@ async function start(){
     apiReadme =  '\n# ' + apiPackages[0];
   }
 
-  console.log(apiPackages.length);
+  console.log('API Sections Parsed & Merged: '+apiPackages.length);
   // console.log(apiReadme);
   fs.writeFileSync('docs/api.md',apiReadme,{encoding:'utf8',flag:'w'});
 
@@ -107,7 +107,7 @@ async function start(){
       }
     }
 
-    console.log(sidebar2);
+    // console.log(sidebar2);
     fileContents = sidebar0 + '- Library Modules\n' + sidebar1 + '\n - [License]' + sidebar2;
     fs.writeFileSync('docs/_sidebar.md',fileContents,{encoding:'utf8',flag:'w'})
 
