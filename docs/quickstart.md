@@ -27,8 +27,8 @@ See our [Web Demo](web-demo.md) to open our example application in the browser.
 
 # Download qDesk
 
-See our [Downloads](download.md) to download our example app.
+See our [Downloads](download.md) section to download our example app.
 
 # Start developing
 
-See our [Developer section](development.md) to start using and extending the Quest Network.
+See our [Developer](development.md) section to start using and extending the Quest Network.
