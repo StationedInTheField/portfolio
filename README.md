@@ -1,22 +1,19 @@
-# Quest Network Documentation
+# Personal Portfolio
+> This project is forked from: https://github.com/QuestNetwork/docs
 
 ## Lead Maintainer
 
 [StationedInTheField](https://github.com/StationedInTheField)
 
-## Description
+## Live
 
-An easy crawler that merges the documentation from the README.md files in this organization.
-
-View it on https://questnetwork.github.io/docs
+View it on https://stationedinthefield.github.io/portfolio
 
 ## Commands
 
 `npm install` Installs the dependencies
 
-`npm run crawl` Crawls the GitHub Organization "QuestNetwork" for README.md files and combines them into the docs folder
-
-`npm run serve` Merges the README.md files in this organization and serves them on `localhost:3000`.
+`npm run serve` Merges the README.md files and serves them on `localhost:3000`.
 
 ## License
 
