@@ -71,3 +71,15 @@ section.cover ul {
 position: relative;
 top: 5px;
   }
+
+  .coverpageDownloadIcon{
+    position: relative;
+      top: 3px;
+      right: 4px;
+  }
+
+.coverpageGitHubIcon{
+  position: relative;
+    top: 3px;
+    right: 4px;
+}
