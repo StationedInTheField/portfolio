@@ -177,5 +177,17 @@ h1{
   .cover-main > blockquote > p{
   display:none
   }
+}
 
+header svg{
+  enable-background:new 0 0 30 24;    width: 46px;
+top: 6px;
+position: relative;
+}
+
+@media only screen and (max-width: 438px) {
+  header svg{
+    width: 35px !important;
+    top: 11px !important;
+  }
 }
