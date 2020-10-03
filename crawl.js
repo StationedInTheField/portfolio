@@ -120,10 +120,7 @@ async function start(){
     if(apiRepos.length > 0){
       for( p of apiRepos){
       readmeContent = fs.readFileSync('docs/'+p.split('/')[1]+'.md').toString('utf8');
-      if(readmeContent.indexOf('\n# Features') > -1){
-        readmeContent = readmeContent.replace('\n# Features','\nCheck out our [API Reference](api.md) to get started!\n# Features')
-      }
-      else if(readmeContent.indexOf('\n# Installation & Usage') > -1){
+      if(readmeContent.indexOf('\n# Installation & Usage') > -1){
         readmeContent = readmeContent.replace('\n# Installation & Usage','\n# Installation & Usage\nCheck out our [API Reference](api.md) to get started!\n')
 
       }

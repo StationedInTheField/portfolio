@@ -10,6 +10,8 @@ Main strategy is to create a Quest Network / IPFS / Ethereum interface that even
 Check out our [QD Messages Module](qd-messages-ts) and the [Awesome Quest Network](awesome) list for more examples.
 
 # Installation & Usage
+Check out our [API Reference](api.md) to get started!
+
 
 ``npm install @questnetwork/quest-os-js@0.9.3``
 
@@ -17,7 +19,6 @@ Check out our [QD Messages Module](qd-messages-ts) and the [Awesome Quest Networ
 
 ``git clone https://github.com/QuestNetwork/quest-os-js && cd quest-os-js && git checkout 0.9.3 && cd ..``
 
-Check out our [API Reference](api.md) to get started!
 # Features
 
 **0.9.2**
