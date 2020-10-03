@@ -21,11 +21,11 @@ Look what other people have built with qDesk: [Awesome Quest Network dApps](http
 
 qDesk allows to lazy load modules.
 
-# Try qDesk live
+# Try it live
 
 See our [Web Demo](web-demo.md) to open our example application in the browser.
 
-# Download qDesk
+# Download
 
 See our [Downloads](download.md) section to download our example app.
 
