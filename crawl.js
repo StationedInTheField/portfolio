@@ -17,13 +17,16 @@ async function start(){
 
       newReadme = "";
       readmeA = readme.split(new RegExp(/https:\/\/github.com\/QuestNetwork\//, 'g'));
+      let i=0;
       for(let r of readmeA){
-        if(r.split('(')[0].split(')')[0].indexOf('/') > -1){
+        if(r.split('(')[0].split(')')[0].indexOf('/') > -1 && i>0){
+
           newReadme += 'https:\/\/github.com\/QuestNetwork\/' + r;
         }
         else{
             newReadme += r;
         }
+        i++;
       }
 
       if(newReadme.length > 0){

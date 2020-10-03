@@ -1,4 +1,6 @@
-# rustysignal
+# Quest Star Rust
+> Forked from: https://github.com/rasviitanen/rustysignal
+
 [![Cargo](https://img.shields.io/crates/v/rustysignal.svg)](https://crates.io/crates/rustysignal) 
 
 > :warning: The version on the master-branch is currently untested. If you want to use a more stable version, install it from cargo according to the instructions below.
