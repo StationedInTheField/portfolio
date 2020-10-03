@@ -112,11 +112,13 @@ async function start(){
     fs.writeFileSync('docs/_sidebar.md',fileContents,{encoding:'utf8',flag:'w'})
 
 
-    let qOSreadme = fs.readFileSync('docs/quest-os-js.md').toString('utf8');
-    qOSreadme = qOSreadme.replace('\n# Features','\nCheck out our [API Reference](api.md) to get started!\n# Features')
-    fs.writeFileSync('docs/quest-os-js.md',qOSreadme,{encoding:'utf8',flag:'w'})
+    let readmeContent = "";
 
+    readmeContent = fs.readFileSync('docs/quest-os-js.md').toString('utf8');
+    readmeContent = readmeContent.replace('\n# Features','\nCheck out our [API Reference](api.md) to get started!\n# Features')
+    fs.writeFileSync('docs/quest-os-js.md',readmeContent,{encoding:'utf8',flag:'w'})
 
+  
 
 }
 
