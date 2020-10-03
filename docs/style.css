@@ -177,7 +177,9 @@ h1{
     top: -30px !important;
 }
 
-
+.mailIcon{
+  margin-right:20px;
+}
 
 @media only screen and (max-width: 778px) {
   .cover-main > blockquote > p{
@@ -197,4 +199,13 @@ header svg{
     width: 35px !important;
     top: 11px !important;
   }
+
+
+}
+
+@media only screen and (max-width: 372px) {
+  .mailIcon{
+    margin-right:0px;
+  }
+
 }
