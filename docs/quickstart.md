@@ -31,4 +31,4 @@ See our [Downloads](download.md) to download our example app.
 
 # Start developing
 
-See our [Developer section](development.md) to download our example app.
+See our [Developer section](development.md) to start using and extending the Quest Network. 
