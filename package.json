@@ -13,7 +13,7 @@
   "scripts": {
     "crawl": "node crawl.js",
     "serve": "npm run crawl && docsify serve ./docs",
-    "update": "npm run crawl && git add * && git commit -m 'update' && git push && docsify serve ./docs"
+    "update": "npm run crawl && git add * && git commit -m 'update' && docsify serve ./docs"
   },
   "private": false,
   "dependencies": {
