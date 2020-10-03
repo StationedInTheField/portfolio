@@ -1,11 +1,6 @@
-# Quest Network <small>0.9.3</small>
+> I'm a writer, graphic designer, illustrator, animation specialist, vfx artist, motion designer, compositor, editor, voice actor, sfx artist, audio/software/web engineer and cryptographer
 
-> Works without the internet!
 
-- Simple and lightweight
-- Multiple themes
-- IPFS PubSub
-
-[GitHub](https://github.com/QuestNetwork/qDesk/)
-[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/OOjs_UI_icon_download-progressive.svg/1024px-OOjs_UI_icon_download-progressive.svg.png" class="coverpageDownloadIcon" height=18px> Download](https://questnetwork.github.io/docs/#/download)
-[:zap: Getting Started](quickstart.md)
+[<img src='_images/b98db494-5e0b-48f0-9e63-be4308256cd0_carw_202x158x640.png' class="quickLink">](animation.md)
+[<img src='_images/3e3bd39e-00ce-46d4-9101-863502a4aa84_carw_202x158x640.png' class="quickLink">](design.md)
+[<img src='_images/0.9.3.png' class="quickLink">](quest-network.md)

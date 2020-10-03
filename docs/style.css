@@ -7,9 +7,9 @@
 }
 
 
-.sidebar-nav ul > li > p > a[title='Developer'],.sidebar-nav ul > li > p > a[title='qOS API Reference'], .sidebar-nav ul > li > a[title='License']{
+.sidebar-nav ul > li > p > a[title='Animation'],.sidebar-nav ul > li > p > a[title='Design & Illustration'],.sidebar-nav ul > li > p > a[title='qOS API Reference'], .sidebar-nav ul > li > a[title='License']{
   font-weight:bold;
-  color:#3246d7;
+  color:#32c032;
   font-size: 1.05rem;
 }
 
@@ -28,7 +28,15 @@
 }
 
 
-a[href="https://github.com/QuestNetwork/development"],a[href="https://github.com/QuestNetwork/api"],a[href="https://github.com/QuestNetwork/security"],a[href="https://github.com/QuestNetwork/download"], a[href="https://github.com/QuestNetwork/support-us"], a[href="https://github.com/QuestNetwork/quickstart"], a[href="https://github.com/QuestNetwork/web-demo"],a[href="https://github.com/QuestNetwork/license"]{
+.sidebar-nav ul > li > p > a[title='Hire me!']{
+  font-weight:bold;
+  color:red;
+  font-size: 1.05rem;
+}
+
+
+
+a[href="https://github.com/QuestNetwork/animation"],a[href="https://github.com/QuestNetwork/quest-network"],a[href="https://github.com/QuestNetwork/design"],a[href="https://github.com/QuestNetwork/download"], a[href="https://github.com/QuestNetwork/support-us"], a[href="https://github.com/QuestNetwork/quickstart"], a[href="https://github.com/QuestNetwork/web-demo"],a[href="https://github.com/QuestNetwork/license"]{
   display:none;
 }
 
@@ -38,8 +46,9 @@ a[href="https://github.com/QuestNetwork/development"],a[href="https://github.com
 }
 
 .cover.show{
-background: linear-gradient(to left bottom, hsl(244deg 43% 32%) 0%,hsl(252deg 100% 6%) 100%) !important;
-
+    background: linear-gradient(to left bottom, #fa3c33 0%,#96211c 100%) !important;
+    display: block;
+    opacity: 1;
 position: fixed;
     z-index: 222;
 
@@ -64,6 +73,11 @@ section.cover ul {
     line-height: 1.5rem;
     margin: 1em 0;
     color: white;
+
+    font-size: 36px;
+line-height: 36px;
+font-weight: 800;
+font-family: Ubuntu;
   }
 
   .githubFooterWidget{
@@ -82,4 +96,73 @@ top: 5px;
   position: relative;
     top: 3px;
     right: 4px;
+}
+
+section.cover .cover-main>p:last-child a:last-child{
+  background-color: transparent !important;
+  padding:0;
+
+  /* border:2px solid white; */
+}
+
+
+.quickLink{
+  height:20vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+section.cover .cover-main>p:last-child a {
+    border: 0;
+    background:transparent;
+}
+
+
+.sidebar{
+  background-color: #f5f5f7
+}
+
+header{
+  background:#fa3c33 !important;
+}
+
+.sidebar-nav{
+/* padding-top: 50px; */
+}
+
+
+.sidebar-nav ul > li:nth-child(2) > p{
+  font-weight:bold;
+  color:#8f9e19 !important;
+  font-size: 1.05rem;
+}
+
+.sidebar-nav ul > li:nth-child(3) > p{
+  font-weight:bold;
+  color:#3246d7 !important;
+  font-size: 1.05rem;
+}
+
+.app-name-link,.search{
+  display: none;
+}
+
+h1{
+      padding-top: 60px;
+}
+
+#illustration-amp-graphic-design,#animation{
+  display: none;
+}
+#quest-network{
+  padding-top: 0px;
+}
+
+
+.content{
+  padding-top:0px !important;
+}
+
+.markdown-section{
+  padding-top:0px !important;
 }
