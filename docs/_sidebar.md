@@ -27,7 +27,7 @@
     - [qD Markets](qd-market-ts.md)
 
 - Library
-  - [quest-os-js](quest-os-js.md)
+  - [qOS](quest-os-js.md)
 
 - Library Modules
 
