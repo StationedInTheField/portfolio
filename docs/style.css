@@ -166,3 +166,16 @@ h1{
 .markdown-section{
   padding-top:0px !important;
 }
+
+.copyrightNotice{
+  padding-top:10px;
+  color: #999999cf;
+}
+
+
+@media only screen and (max-width: 778px) {
+  .cover-main > blockquote > p{
+  display:none
+  }
+
+}
