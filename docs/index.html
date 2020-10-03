@@ -22,7 +22,8 @@
 
 
   <link rel="stylesheet" href="style.css">
-  <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1.0.1/index.min.js"></script>
+
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1.0.1/index.min.js"></script> -->
 	<style>
 		nav.app-nav li ul {
 			min-width: 100px;
@@ -32,10 +33,12 @@
 			box-shadow: none !important;
 		}
 	</style>
+	<!-- Place this tag in your head or just before your close body tag. -->
 </head>
 
 <body>
 	<div id="app">Loading ...</div>
+
 	<script>
 		window.$docsify = {
       // alias: {
@@ -96,7 +99,7 @@
             if(vm.route.path === '/'){
               return html
             }
-            return `${html}<br/> Thanks for spending time with us!`
+            return `${html}<br/> Thanks for spending time with us! <div style="display:inline-block;" class="githubFooterWidget"><a class="github-button" href="https://github.com/QuestNetwork/qDesk" data-color-scheme="no-preference: light;" data-icon="octicon-star" data-show-count="true" aria-label="Star QuestNetwork/qDesk on GitHub">Star</a></div>`
           })
         }
       ]
@@ -111,6 +114,10 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-markdown.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-nginx.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-php.min.js"></script>
+
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
   <script>
   ((window.gitter = {}).chat = {}).options = {
     room: 'docsifyjs/Lobby'

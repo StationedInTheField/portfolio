@@ -65,3 +65,9 @@ section.cover ul {
     margin: 1em 0;
     color: white;
   }
+
+  .githubFooterWidget{
+    margin-left: 10px;
+position: relative;
+top: 6px;
+  }
